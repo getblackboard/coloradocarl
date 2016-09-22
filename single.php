@@ -1,53 +1,67 @@
-<?php
-/*
-* Single Post template file
-*/
-get_header();
+<?php get_header(); ?>
 
-$page_title_area = get_theme_mod('page_title_area');
+	<main role="main">
+	<!-- section -->
+	<section>
 
-if($page_title_area != 2): ?>
-<div class="heading">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="title">
-                    <b><?php the_title(); ?></b>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<?php else : ?>
-<div class="page-title-area"></div>
-<?php endif; ?>
-<div class="page-content">
-     <div class="container">
-        <div class="row my_blog">
-            <?php get_sidebar(); ?>
-            <div class="col-md-9 col-sm-8 col-xs-12 main-post">
-            	<?php while ( have_posts() ) : the_post(); ?>
-                <div class="leather <?php if (is_sticky()){echo 'sticky';} ?> ">
-                	<?php if ( has_post_thumbnail() ) : ?>
-                        <?php the_post_thumbnail( 'bizzboss-blog-thumbnail-image', array( 'alt' => esc_attr(get_the_title()), 'class' => 'img-responsive') ); ?>
-                	<?php endif; ?>
-                    <h5><?php the_title(); ?></h5>
-                    <?php bizzboss_entry_meta(); ?>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="text">
-							 <?php the_content(); ?>    
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endwhile; ?>
-                <div class="comments-article">
-                    <div class="clearfix"></div> 
-                    <?php comments_template('', true); ?>
-                </div>
-        </div>
-        </div>
-    </div>
-</div>
+	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+		<!-- article -->
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+			<!-- post thumbnail -->
+			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
+				</a>
+			<?php endif; ?>
+			<!-- /post thumbnail -->
+
+			<!-- post title -->
+			<h1>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+			</h1>
+			<!-- /post title -->
+
+			<!-- post details -->
+			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
+			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
+			<!-- /post details -->
+
+			<?php the_content(); // Dynamic Content ?>
+
+			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+
+			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+
+			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+
+			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
+
+			<?php comments_template(); ?>
+
+		</article>
+		<!-- /article -->
+
+	<?php endwhile; ?>
+
+	<?php else: ?>
+
+		<!-- article -->
+		<article>
+
+			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
+
+		</article>
+		<!-- /article -->
+
+	<?php endif; ?>
+
+	</section>
+	<!-- /section -->
+	</main>
+
+<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

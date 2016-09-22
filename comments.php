@@ -1,23 +1,24 @@
-<?php
-/**
- * The template for displaying Comments.
- *
- */
-if ( post_password_required() )
-    return; ?>
-<div class="row">
-    <div class="col-md-12 col-sm-12 col-xs-12 admin">
-        <?php wp_list_comments(array('avatar_size' => 110,'status' => 'approve', 'style' => 'div', 'short_ping' => true,)); ?>
-    </div>
+<div class="comments">
+	<?php if (post_password_required()) : ?>
+	<p><?php _e( 'Post is password protected. Enter the password to view any comments.', 'html5blank' ); ?></p>
 </div>
-<div class="row">
-    <div class="col-md-12 comment">
-        <h5> 
-            <?php comments_popup_link( __('No comments yet','bizzboss'), __('1 Comment','bizzboss'),__('% Comments','bizzboss'),'', __('Comments are disabled','bizzboss')); ?>
-        </h5>
-    </div>
-    <div class="col-md-12 col-sm-12 leave_form">
-        <?php comment_form(); ?>
-    </div>
-    <?php the_comments_navigation(); ?>
+
+	<?php return; endif; ?>
+
+<?php if (have_comments()) : ?>
+
+	<h2><?php comments_number(); ?></h2>
+
+	<ul>
+		<?php wp_list_comments('type=comment&callback=html5blankcomments'); // Custom callback in functions.php ?>
+	</ul>
+
+<?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+
+	<p><?php _e( 'Comments are closed here.', 'html5blank' ); ?></p>
+
+<?php endif; ?>
+
+<?php comment_form(); ?>
+
 </div>

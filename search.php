@@ -1,40 +1,19 @@
-<?php
-/*
- * Search Template File
- */
-get_header();
-$page_title_area = get_theme_mod('page_title_area');
+<?php get_header(); ?>
 
-if($page_title_area != 2) : ?>
-<div class="heading">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="title mobile_article">
-                    <b> <?php _e('Search results for : ', 'bizzboss'); echo get_search_query(); ?> </b>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<?php else : ?>
-<div class="page-title-area"></div>
-<?php endif; ?>
+	<main role="main">
+		<!-- section -->
+		<section>
 
-<?php if (have_posts()) : ?>
- 	<?php get_template_part('content'); ?>
- <?php else : ?>
- 	<div class="container">
-        <div class="row my_blog">
-			<div class="row">
-            	<div class="col-md-12 col-sm-12 col-xs-12 admin">
-					<p class="spage">
-						<?php _e('Sorry, but nothing matched your search terms. Please try again with some different keywords', 'bizzboss'); ?>.</p> 
-					    <?php get_search_form(); ?>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-<?php endif; ?>
+			<h1><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
+
+			<?php get_template_part('loop'); ?>
+
+			<?php get_template_part('pagination'); ?>
+
+		</section>
+		<!-- /section -->
+	</main>
+
+<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
