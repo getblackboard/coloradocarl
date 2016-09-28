@@ -1,7 +1,76 @@
 
 
-$primary-color: #333;
+$primary-color: #e5e5e5;
+$white:#fff;
+$black:#000;
+$main-font-size: 16px;
+$header-color:#0078c5;
+/*-------
+  header
+---------*/
 
 .header{
 	background: $primary-color;
+	padding:20px;
+		h1 {	
+				color:$header-color;
+				font-size:$main-font-size + 22;		
+			}
+}
+/*-------
+  nav
+---------*/
+.nav {
+    background: $white;
+    padding: 10px;
+}
+ .menu ul {
+    list-style: none;
+    li {
+    	a{
+    		font-size:$main-font-size;
+    		color:$black;
+
+    	}
+    	a:hover{
+    		cursor:pointer;
+    			text-decoration: underline;
+    		}
+    }
+}
+/*-------
+  body
+---------*/
+/*-------
+  IDX Showcase
+---------*/
+
+.new_showcase {
+    width: 75%;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.IDX-showcaseContainer {
+    height: auto!important;
+}
+#IDX-showcaseGallery-9796 .IDX-showcaseCell div {
+    text-align: center;
+    background: $white;
+}
+
+/*-------
+  footer
+---------*/
+
+.footer {
+	display: flex;
+    justify-content: center;
+	font-size:$main-font-size;
+    background: $black;
+    padding: 20px;
+    color: $white;
+    font-weight:bold;
+
 }

@@ -21,6 +21,11 @@
 
 			</article>
 			<!-- /article -->
+			<!-- Featured Showcase -->
+					<?php Timber::render('slide.twig'); ?>
+
+		<?php Timber::render('search.twig'); ?>
+		<!--/Featured Showcase -->
 
 		<?php endwhile; ?>
 
@@ -39,6 +44,9 @@
 		</section>
 		<!-- /section -->
 	</main>
+
+	
+				
 
 <?php get_sidebar(); ?>
 

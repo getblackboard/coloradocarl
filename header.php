@@ -25,7 +25,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<!-- wrapper -->
+		<section>Social Media</section>
 		
 
 			<!-- header -->
@@ -34,18 +34,20 @@
 					<!-- logo -->
 					<div class="logo">
 						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
+							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script 
+						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">-->							
+						<h1>Denver and Boulder Area Real Estate</h1>
+						<h3>Real Estate Resources for Denver and Boulder Colorado</h3>
 						</a>
 					</div>
-					<!-- /logo -->
+					
+			</header>
 
-					<!-- nav -->
+			<!-- nav -->
 					<nav class="nav" role="navigation">
 						<?php html5blank_nav(); ?>
 					</nav>
 					<!-- /nav -->
-
-			</header>
 			<!-- /header -->
 			<div class="wrapper">
+				
