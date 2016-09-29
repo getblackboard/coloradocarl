@@ -1,0 +1,27 @@
+.IDX-quicksearchWrapper {
+	background: rgba(255, 255, 255, 0.5);
+	padding: 1em;
+	font-family: Helvetica, Arial, sans-serif;
+
+   .IDX-qsInput {
+	   	border: none;
+	    padding: .5em 1em;
+   }
+
+	#IDX-quicksearchForm-12672 {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.IDX-qsLabel {
+		display: block;
+		vertical-align: top;
+	}
+
+	.IDX-qsSelectInput {
+		height: 25px;
+	}
+
+}
+

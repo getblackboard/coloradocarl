@@ -25,8 +25,12 @@
 	</head>
 	<body <?php body_class(); ?>>
 
-		<section>Social Media</section>
 		
+		<!-- nav -->
+        					<nav class="nav" role="navigation">
+        						<?php html5blank_nav(); ?>
+        					</nav>
+        					<!-- /nav -->
 
 			<!-- header -->
 			<header class="header clear" role="banner">
@@ -39,15 +43,14 @@
 						<h1>Denver and Boulder Area Real Estate</h1>
 						<h3>Real Estate Resources for Denver and Boulder Colorado</h3>
 						</a>
+
+						<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-12672" src="//ColoradoCarl.idxbroker.com/idx/quicksearchjs.php?widgetid=12672"></script>
+
 					</div>
 					
 			</header>
 
-			<!-- nav -->
-					<nav class="nav" role="navigation">
-						<?php html5blank_nav(); ?>
-					</nav>
-					<!-- /nav -->
+
 			<!-- /header -->
 			<div class="wrapper">
 				

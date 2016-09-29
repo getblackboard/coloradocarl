@@ -1,43 +1,78 @@
-
+@import './partials/quick-search.scss';
 
 $primary-color: #e5e5e5;
-$white:#fff;
-$black:#000;
+$white: #fff;
+$black: #000;
 $main-font-size: 16px;
-$header-color:#0078c5;
+$header-color: #0078c5;
+$home-hero: url(./img/hero-home.jpg);
+$gray: #999;
+
 /*-------
   header
 ---------*/
 
 .header{
 	background: $primary-color;
-	padding:20px;
-		h1 {	
-				color:$header-color;
-				font-size:$main-font-size + 22;		
-			}
+    background: $home-hero;
+	padding: 10em;
+    text-align: center;
+
+	h1 {	
+		color: $header-color;
+		font-size: $main-font-size + 22;		
+	}
+
 }
+
 /*-------
   nav
 ---------*/
-.nav {
-    background: $white;
-    padding: 10px;
-}
- .menu ul {
-    list-style: none;
-    li {
-    	a{
-    		font-size:$main-font-size;
-    		color:$black;
+nav {
 
-    	}
-    	a:hover{
-    		cursor:pointer;
-    			text-decoration: underline;
-    		}
+    ul {
+        display: flex;
+        flex-direction: row;
+        background: $gray;
+        width: 100%;
+        padding: 10px;
+        list-style: none;
+        justify-content: flex-end;
+        margin: 0px;
+
+    li {
+      padding: 10px 15px;
+      display: flex;
+      flex-wrap: wrap;
+
+        a {
+            color: $white;
+            font-size: $main-font-size;
+            font-weight: bold;
+        }
+
     }
+
+    ul {
+        display:none;
+    }
+
+  }
+
 }
+
+nav ul > li:hover > ul {
+  display: flex;
+}
+
+ul.sub-menu {
+  position: absolute;
+  width: 250px;
+  z-index: 99;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
 /*-------
   body
 ---------*/

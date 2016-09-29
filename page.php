@@ -22,7 +22,7 @@
 			</article>
 			<!-- /article -->
 			<!-- Featured Showcase -->
-					<?php Timber::render('slide.twig'); ?>
+					<?php Timber::render('views/slide.twig'); ?>
 
 		<?php Timber::render('search.twig'); ?>
 		<!--/Featured Showcase -->

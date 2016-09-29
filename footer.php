@@ -9,7 +9,7 @@
 					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>. -->
 				</p>
 				<!-- /copyright -->
-
+<section>Social Media</section>
 			</footer>
 			<!-- /footer -->
 
