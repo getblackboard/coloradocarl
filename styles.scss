@@ -13,15 +13,15 @@ $gray: #999;
 ---------*/
 
 .header{
-	background: $primary-color;
-    background: $home-hero;
-	padding: 10em;
-    text-align: center;
+  background: $primary-color;
+  background: $home-hero;
+  padding: 10em;
+  text-align: center;
 
-	h1 {	
-		color: $header-color;
-		font-size: $main-font-size + 22;		
-	}
+  h1 {
+    color: $header-color;
+    font-size: $main-font-size + 22;
+  }
 
 }
 
@@ -30,48 +30,60 @@ $gray: #999;
 ---------*/
 nav {
 
-    ul {
-        display: flex;
-        flex-direction: row;
-        background: $gray;
-        width: 100%;
-        padding: 10px;
-        list-style: none;
-        justify-content: flex-end;
-        margin: 0px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    background: $gray;
+    width: 100%;
+    padding: 10px;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0px;
 
     li {
       padding: 10px 15px;
       display: flex;
       flex-wrap: wrap;
 
-        a {
-            color: $white;
-            font-size: $main-font-size;
-            font-weight: bold;
-        }
+      a {
+        color: $white;
+        font-size: $main-font-size;
+        font-weight: bold;
+      }
 
     }
 
-    ul {
+    ul{
+      background:none;
+      li {
         display:none;
+      }
     }
 
   }
 
 }
-
 nav ul > li:hover > ul {
+  background: $gray;
+   display: flex;
+ }
+
+nav ul > li:hover > ul li {
   display: flex;
 }
 
 ul.sub-menu {
+
   position: absolute;
   width: 250px;
   z-index: 99;
   flex-wrap: wrap;
   margin-top: 40px;
+  justify-content: flex-start;
+    &hover{display:flex;}
+  li{background: $gray;}
 }
+
 
 /*-------
   body
@@ -81,18 +93,18 @@ ul.sub-menu {
 ---------*/
 
 .new_showcase {
-    width: 75%;
-    padding: 20px;
-    background: #f5f5f5;
-    border-radius: 15px;
+  width: 75%;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 15px;
 }
 
 .IDX-showcaseContainer {
-    height: auto!important;
+  height: auto!important;
 }
 #IDX-showcaseGallery-9796 .IDX-showcaseCell div {
-    text-align: center;
-    background: $white;
+  text-align: center;
+  background: $white;
 }
 
 /*-------
@@ -100,12 +112,12 @@ ul.sub-menu {
 ---------*/
 
 .footer {
-	display: flex;
-    justify-content: center;
-	font-size:$main-font-size;
-    background: $black;
-    padding: 20px;
-    color: $white;
-    font-weight:bold;
+  display: flex;
+  justify-content: center;
+  font-size:$main-font-size;
+  background: $black;
+  padding: 20px;
+  color: $white;
+  font-weight:bold;
 
 }
