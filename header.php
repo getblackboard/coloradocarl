@@ -33,24 +33,10 @@
         					<!-- /nav -->
 
 			<!-- header -->
-			<header class="header clear" role="banner">
-
-					<!-- logo -->
-					<div class="logo">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script 
-						<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">-->							
-						<h1>Denver and Boulder Area Real Estate</h1>
-						<h3>Real Estate Resources for Denver and Boulder Colorado</h3>
-						</a>
-
-						<script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-12672" src="//ColoradoCarl.idxbroker.com/idx/quicksearchjs.php?widgetid=12672"></script>
-
-					</div>
-					
-			</header>
-
+		
+		<?php Timber::render('header.twig'); ?>	
 
 			<!-- /header -->
+
 			<div class="wrapper">
 				

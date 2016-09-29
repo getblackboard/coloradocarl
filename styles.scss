@@ -4,7 +4,7 @@ $primary-color: #e5e5e5;
 $white: #fff;
 $black: #000;
 $main-font-size: 16px;
-$header-color: #0078c5;
+$header-color: $white;
 $home-hero: url(./img/hero-home.jpg);
 $gray: #999;
 
@@ -15,12 +15,20 @@ $gray: #999;
 .header{
   background: $primary-color;
   background: $home-hero;
+  color: $header-color;
   padding: 10em;
   text-align: center;
 
   h1 {
     color: $header-color;
     font-size: $main-font-size + 22;
+    margin: 0;
+  }
+
+  h2 {
+    color: $header-color;
+    margin: 0 0 1em 0;
+    font-size: $main-font-size + 6;
   }
 
 }

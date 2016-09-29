@@ -2,9 +2,11 @@
   header
 ---------*/
 .IDX-quicksearchWrapper {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 1em;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 2em;
   font-family: Helvetica, Arial, sans-serif;
+  box-shadow: 1px 1px 1px rgba(128, 128, 128, 0.72);
 }
 .IDX-quicksearchWrapper .IDX-qsInput {
   border: none;
@@ -12,19 +14,28 @@
 }
 .IDX-quicksearchWrapper #IDX-quicksearchForm-12672 {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .IDX-quicksearchWrapper .IDX-qsLabel {
   display: block;
+  padding-bottom: 0.5em;
   vertical-align: top;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .IDX-quicksearchWrapper .IDX-qsSelectInput {
   height: 25px;
 }
+.IDX-quicksearchWrapper #IDX-qsSubmit-12672[type='submit'] {
+  background: #00bcd4;
+  font-size: 12px;
+}
 .header {
   background: #e5e5e5;
   background: url(./img/hero-home.jpg);
+  color: #fff;
   padding: 10em;
   text-align: center;
   /*-------
@@ -32,8 +43,14 @@
 ---------*/
 }
 .header h1 {
-  color: #0078c5;
+  color: #fff;
   font-size: 38px;
+  margin: 0;
+}
+.header h2 {
+  color: #fff;
+  margin: 0 0 1em 0;
+  font-size: 22px;
 }
 nav ul {
   display: flex;
@@ -56,9 +73,16 @@ nav ul li a {
   font-weight: bold;
 }
 nav ul ul {
+  background: none;
+}
+nav ul ul li {
   display: none;
 }
 nav ul > li:hover > ul {
+  background: #999;
+  display: flex;
+}
+nav ul > li:hover > ul li {
   display: flex;
 }
 ul.sub-menu {
@@ -67,12 +91,19 @@ ul.sub-menu {
   z-index: 99;
   flex-wrap: wrap;
   margin-top: 40px;
+  justify-content: flex-start;
   /*-------
   body
 ---------*/
   /*-------
   IDX Showcase
 ---------*/
+}
+ul.sub-menuhover {
+  display: flex;
+}
+ul.sub-menu li {
+  background: #999;
 }
 .new_showcase {
   width: 75%;
