@@ -75,10 +75,12 @@ input:focus {
 
 /* wrapper */
 .wrapper {
-	max-width:1280px;
-	width:95%;
-	margin:0 auto;
-	position:relative;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 /* header */
 .header {
@@ -96,9 +98,7 @@ input:focus {
 
 }
 /* sidebar */
-.sidebar {
 
-}
 /* footer */
 .footer {
 

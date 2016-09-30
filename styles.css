@@ -95,9 +95,6 @@ ul.sub-menu {
   /*-------
   body
 ---------*/
-  /*-------
-  IDX Showcase
----------*/
 }
 ul.sub-menuhover {
   display: flex;
@@ -105,8 +102,24 @@ ul.sub-menuhover {
 ul.sub-menu li {
   background: #999;
 }
+@media (min-width: 660px) {
+  /*-------
+  IDX Showcase
+---------*/  main {
+    display: flex;
+    justify-content: flex-start;
+    width: 75%;
+  }
+  .right_content {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 21%;
+    margin: 15px;
+    color: #000;
+  }
+}
 .new_showcase {
-  width: 75%;
   padding: 20px;
   background: #f5f5f5;
   border-radius: 15px;
@@ -117,6 +130,9 @@ ul.sub-menu li {
 #IDX-showcaseGallery-9796 .IDX-showcaseCell div {
   text-align: center;
   background: #fff;
+}
+#IDX-quicksearch-8068 {
+  text-align: left;
   /*-------
   footer
 ---------*/

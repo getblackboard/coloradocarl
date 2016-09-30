@@ -1,10 +1,11 @@
 <?php get_header(); ?>
-
+<?php Timber::render('views/slide.twig'); ?>
+	<div class="wrapper">
 	<main role="main">
 		<!-- section -->
 		<section>
-
-			<h1><?php the_title(); ?></h1>
+<!-- 
+			<h1><?php the_title(); ?></h1> -->
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -22,7 +23,7 @@
 			</article>
 			<!-- /article -->
 			<!-- Featured Showcase -->
-					<?php Timber::render('views/slide.twig'); ?>
+			
 
 		<?php Timber::render('search.twig'); ?>
 		<!--/Featured Showcase -->
@@ -48,6 +49,6 @@
 	
 				
 
-<?php get_sidebar(); ?>
+	<div class="right_content"><?php get_sidebar(); ?></div>
 
 <?php get_footer(); ?>
