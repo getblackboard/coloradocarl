@@ -34,7 +34,13 @@ $searchWrapperBg: rgba(0,0,0,0.75);
 	#IDX-qsSubmit-12672[type='submit'] {
 		background: #00BCD4;
     	font-size: 12px;
+    	margin-top: 10px;
 	}
 
+
+}
+#IDX-quicksearchForm-12672 .IDX-qsInput {
+    margin: 0 2px;
+    width: 100px;
 }
 

@@ -31,6 +31,11 @@
 .IDX-quicksearchWrapper #IDX-qsSubmit-12672[type='submit'] {
   background: #00bcd4;
   font-size: 12px;
+  margin-top: 10px;
+}
+#IDX-quicksearchForm-12672 .IDX-qsInput {
+  margin: 0 2px;
+  width: 100px;
 }
 .header {
   background: #e5e5e5;
