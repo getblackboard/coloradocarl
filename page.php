@@ -1,29 +1,34 @@
-<?php get_header(); ?>
-<?php Timber::render('views/slide.twig'); ?>
+	<?php get_header(); ?>
+
+	<?php Timber::render('views/3-up.twig'); ?>
+
+	<?php Timber::render('views/slide.twig'); ?>
+	
 	<div class="wrapper">
+
 	<main role="main">
 		<!-- section -->
 		<section>
-<!-- 
-			<h1><?php the_title(); ?></h1> -->
+
+		<!-- <h1><?php the_title(); ?></h1> -->
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<!-- article -->
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<?php the_content(); ?>
+			<?php the_content(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
+			<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-				<br class="clear">
+			<br class="clear">
 
-				<?php edit_post_link(); ?>
+			<?php edit_post_link(); ?>
 
-			</article>
-			<!-- /article -->
-			<!-- Featured Showcase -->
-			
+		</article>
+		<!-- /article -->
+		<!-- Featured Showcase -->
+
 
 		<?php Timber::render('search.twig'); ?>
 		<!--/Featured Showcase -->
@@ -46,8 +51,8 @@
 		<!-- /section -->
 	</main>
 
-	
-				
+
+
 
 	<div class="right_content"><?php get_sidebar(); ?></div>
 
