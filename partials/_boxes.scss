@@ -1,0 +1,47 @@
+.boxes {
+  display: flex;
+  position: relative;
+  padding: 5em 2em 2em 2em;
+  justify-content: space-around;
+  text-align: center;
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+}
+
+.box {
+  position: relative;
+  margin: 2em;
+  padding: 30px 15px 40px;
+  max-width: 400px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: $white;
+    width: 75px;
+    height: 75px;
+    top: -15%;
+    margin-left: -10%;
+    border: 1px solid $border-color;
+  }
+
+}
+
+
+@media only screen and (max-width: 660px) {
+
+  .boxes {
+    flex-direction: column;
+  }
+
+}

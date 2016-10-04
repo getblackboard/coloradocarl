@@ -1,6 +1,4 @@
-/*-------
-  header
----------*/
+/* MISC > to be moved ... */
 .IDX-quicksearchWrapper {
   background: rgba(0, 0, 0, 0.75);
   color: #fff;
@@ -29,43 +27,70 @@
   height: 25px;
 }
 .IDX-quicksearchWrapper #IDX-qsSubmit-12672[type='submit'] {
-  background: #00bcd4;
-  font-size: 12px;
+  background: #169679;
+  color: #fff;
   margin-top: 10px;
+  font-size: 12px;
 }
 #IDX-quicksearchForm-12672 .IDX-qsInput {
   margin: 0 2px;
   width: 100px;
 }
-.header {
-  background: #e5e5e5;
-  background: url(./img/hero-home.jpg);
-  color: #fff;
-  padding: 10em;
+.boxes {
+  display: flex;
+  position: relative;
+  padding: 5em 2em 2em 2em;
+  justify-content: space-around;
   text-align: center;
+}
+.boxes h2 {
+  font-size: 18px;
+}
+.boxes p {
+  font-size: 14px;
+}
+.box {
+  position: relative;
+  margin: 2em;
+  padding: 30px 15px 40px;
+  max-width: 400px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+}
+.box:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background: #fff;
+  width: 75px;
+  height: 75px;
+  top: -15%;
+  margin-left: -10%;
+  border: 1px solid #dbdbdb;
+}
+@media only screen and (max-width: 660px) {
+  .boxes {
+    flex-direction: column;
+  }
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   /*-------
   nav
 ---------*/
 }
-.header h1 {
-  color: #fff;
-  font-size: 38px;
-  margin: 0;
-}
-.header h2 {
-  color: #fff;
-  margin: 0 0 1em 0;
-  font-size: 22px;
-}
 nav {
-  background: #999;
+  background: #fff;
 }
 nav a {
-  color: #fff;
+  color: #000;
   font-size: 16px;
   font-weight: bold;
   float: left;
   padding: 20px;
+}
+nav a:hover {
+  color: #169679;
 }
 nav ul {
   display: flex;
@@ -80,7 +105,6 @@ nav ul li {
   flex-wrap: wrap;
 }
 nav ul li a {
-  color: #fff;
   font-size: 16px;
   font-weight: bold;
 }
@@ -91,7 +115,7 @@ nav ul ul li {
   display: none;
 }
 nav ul > li:hover > ul {
-  background: #999;
+  background: ;
   display: flex;
 }
 nav ul > li:hover > ul li {
@@ -105,35 +129,36 @@ ul.sub-menu {
   margin-top: 40px;
   justify-content: flex-start;
   /*-------
-  body
+  header
 ---------*/
 }
-ul.sub-menuhover {
+ul.sub-menu:hover {
   display: flex;
 }
 ul.sub-menu li {
-  background: #999;
+  background: ;
 }
-@media (min-width: 660px) {
+.header {
+  background: url(./img/hero-home.jpg);
+  color: #fff;
+  padding: 10em;
+  text-align: center;
   /*-------
   IDX Showcase
----------*/  main {
-    display: flex;
-    justify-content: flex-start;
-    width: 75%;
-  }
-  .right_content {
-    padding: 10px;
-    display: flex;
-    justify-content: flex-end;
-    width: 21%;
-    margin: 15px;
-    color: #000;
-  }
+---------*/
+}
+.header h1 {
+  color: #fff;
+  font-size: 38px;
+  margin: 0;
+}
+.header h2 {
+  color: #fff;
+  margin: 0 0 1em 0;
+  font-size: 22px;
 }
 .new_showcase {
   padding: 20px;
-  background: #f5f5f5;
   border-radius: 15px;
 }
 .IDX-showcaseContainer {
@@ -157,4 +182,22 @@ ul.sub-menu li {
   padding: 20px;
   color: #fff;
   font-weight: bold;
+  /*-------
+Media queries
+---------*/
+}
+@media only screen and (min-width: 660px) {
+  main {
+    display: flex;
+    justify-content: flex-start;
+    width: 75%;
+  }
+  .right_content {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 21%;
+    margin: 15px;
+    color: #000;
+  }
 }

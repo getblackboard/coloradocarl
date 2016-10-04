@@ -1,21 +1,97 @@
-@import './partials/quick-search.scss';
+@import './partials/partials';
 
-$primary-color: #e5e5e5;
-$white: #fff;
-$black: #000;
+/* MISC > to be moved ... */
 $main-font-size: 16px;
-$header-color: $white;
 $home-hero: url(./img/hero-home.jpg);
-$gray: #999;
-$background: #f5f5f5;
-$border-radius:15px;
+$border-radius: 15px;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/*-------
+  nav
+---------*/
+nav {
+  background: $white;
+
+  a {
+    color: $black;
+    font-size: $main-font-size;
+    font-weight: bold;
+    float: left;
+    padding: 20px;
+
+    &:hover {
+      color: $green;
+    }
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: flex-end;
+    margin: 0px;
+
+    li {
+      padding: 0px 15px;
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        font-size: $main-font-size;
+        font-weight: bold;
+      }
+
+    }
+
+    ul {
+      background:none;
+
+      li {
+        display:none;
+      }
+
+    }
+
+  }
+
+}
+
+nav ul > li:hover > ul {
+  background: $gray;
+  display: flex;
+ }
+
+nav ul > li:hover > ul li {
+  display: flex;
+}
+
+ul.sub-menu {
+  position: absolute;
+  width: 250px;
+  z-index: 99;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: flex-start;
+
+  &:hover {
+    display:flex;
+  }
+
+  li {
+    background: $gray;
+  }
+
+}
 
 /*-------
   header
 ---------*/
 
 .header{
-  background: $primary-color;
   background: $home-hero;
   color: $header-color;
   padding: 10em;
@@ -36,112 +112,24 @@ $border-radius:15px;
 }
 
 /*-------
-  nav
----------*/
-nav {
-background: $gray;
-a{ 
-  color:$white;
-font-size: $main-font-size;
- font-weight: bold;
- float: left;
-  padding: 20px;
-}
-  ul {
-    display: flex;
-    flex-direction: row;
-    //width: 100%;
-   
-    list-style: none;
-    justify-content: flex-end;
-    margin: 0px;
-
-    li {
-      padding: 0px 15px;
-      display: flex;
-      flex-wrap: wrap;
-
-      a {
-        color: $white;
-        font-size: $main-font-size;
-        font-weight: bold;
-      }
-
-    }
-
-    ul{
-      background:none;
-      li {
-        display:none;
-      }
-    }
-
-  }
-
-}
-nav ul > li:hover > ul {
-  background: $gray;
-   display: flex;
- }
-
-nav ul > li:hover > ul li {
-  display: flex;
-}
-
-ul.sub-menu {
-
-  position: absolute;
-  width: 250px;
-  z-index: 99;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  justify-content: flex-start;
-    &hover{display:flex;}
-  li{background: $gray;}
-}
-
-
-/*-------
-  body
----------*/
-@media (min-width: 660px) {
-
-main {
-    display: flex;
-    justify-content: flex-start;
-    width: 75%;
-    
-}
-.right_content {
-    padding:10px;
-    display: flex;
-    justify-content: flex-end;
-    width: 21%;
-    margin: 15px;
-    color:#000;
-  }
-}
-/*-------
   IDX Showcase
 ---------*/
-
 .new_showcase {
-  //width: 100%;
   padding: 20px;
-  background: $background;
   border-radius: $border-radius;
 }
 
 .IDX-showcaseContainer {
   height: auto!important;
 }
+
 #IDX-showcaseGallery-9796 .IDX-showcaseCell div {
   text-align: center;
   background: $white;
 }
 
 #IDX-quicksearch-8068 {
-    text-align: left; 
+    text-align: left;
 }
 
 /*-------
@@ -156,5 +144,26 @@ main {
   padding: 20px;
   color: $white;
   font-weight:bold;
+}
+
+/*-------
+Media queries
+---------*/
+@media only screen and (min-width: 660px) {
+
+  main {
+    display: flex;
+    justify-content: flex-start;
+    width: 75%;
+  }
+
+  .right_content {
+    padding:10px;
+    display: flex;
+    justify-content: flex-end;
+    width: 21%;
+    margin: 15px;
+    color:#000;
+  }
 
 }
