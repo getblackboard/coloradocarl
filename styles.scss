@@ -61,7 +61,7 @@ nav {
 }
 
 nav ul > li:hover > ul {
-  background: $gray;
+  background: $white;
   display: flex;
  }
 
@@ -71,20 +71,14 @@ nav ul > li:hover > ul li {
 
 ul.sub-menu {
   position: absolute;
-  width: 250px;
   z-index: 99;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 60px;
   justify-content: flex-start;
 
   &:hover {
     display:flex;
   }
-
-  li {
-    background: $gray;
-  }
-
 }
 
 /*-------

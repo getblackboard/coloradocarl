@@ -1,6 +1,10 @@
 	<?php get_header(); ?>
 
-	<?php Timber::render('views/3-up.twig'); ?>
+
+	<?php
+		$context = array();
+		$context['welcome'] = Timber::get_post(2);
+	 	Timber::render('views/3-up.twig', $context); ?>
 
 	<?php Timber::render('views/slide.twig'); ?>
 	

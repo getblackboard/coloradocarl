@@ -115,7 +115,7 @@ nav ul ul li {
   display: none;
 }
 nav ul > li:hover > ul {
-  background: ;
+  background: #fff;
   display: flex;
 }
 nav ul > li:hover > ul li {
@@ -123,10 +123,9 @@ nav ul > li:hover > ul li {
 }
 ul.sub-menu {
   position: absolute;
-  width: 250px;
   z-index: 99;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 60px;
   justify-content: flex-start;
   /*-------
   header
@@ -134,9 +133,6 @@ ul.sub-menu {
 }
 ul.sub-menu:hover {
   display: flex;
-}
-ul.sub-menu li {
-  background: ;
 }
 .header {
   background: url(./img/hero-home.jpg);
