@@ -28,6 +28,9 @@
 		
 		<!-- nav -->
         					<nav class="nav" role="navigation">
+        					<a  href="<?php echo home_url(); ?>">
+        					Carl Borrbmann
+        					</a>
         						<?php html5blank_nav(); ?>
         					</nav>
         					<!-- /nav -->
