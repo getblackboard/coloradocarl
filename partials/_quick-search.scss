@@ -34,6 +34,10 @@
 		color: $white;
 		margin-top: 10px;
 		font-size: 12px;
+		&:hover{
+			background:$white;
+			color:$green;
+		}
 	}
 
 }

@@ -32,6 +32,10 @@
   margin-top: 10px;
   font-size: 12px;
 }
+.IDX-quicksearchWrapper #IDX-qsSubmit-12672[type='submit']:hover {
+  background: #fff;
+  color: #169679;
+}
 #IDX-quicksearchForm-12672 .IDX-qsInput {
   margin: 0 2px;
   width: 100px;
@@ -58,7 +62,6 @@
   border-radius: 4px;
 }
 .box:before {
-  content: "";
   display: inline-block;
   position: absolute;
   background: #fff;
@@ -67,11 +70,136 @@
   top: -15%;
   margin-left: -10%;
   border: 1px solid #dbdbdb;
+  border-radius: 100%;
+  font-family: FontAwesome;
+  line-height: 75px;
+  font-size: 35px;
+  color: #169679;
+}
+.box:first-child:before {
+  content: "\f19c";
+}
+.box:nth-child(2):before {
+  content: "\f1ad";
+}
+.box:last-child:before {
+  content: "\f015";
+}
+.box:hover:before {
+  background: #169679;
+  color: #fff;
 }
 @media only screen and (max-width: 660px) {
   .boxes {
     flex-direction: column;
   }
+}
+#IDX-carouselGallery-11486 {
+  width: 100%;
+}
+#IDX-carouselGallery-11486 .IDX-carouselCell {
+  min-width: 140px;
+}
+#IDX-carouselGallery-11486 .IDX-carouselContainer {
+  height: auto;
+}
+#IDX-carouselGallery-11486 .IDX-carouselContainer .IDX-carouselLink {
+  height: auto;
+}
+#IDX-carouselGallery-11486 .IDX-carouselContainer .IDX-carouselLink:before {
+  height: auto;
+}
+#IDX-carouselGallery-11486 .IDX-carouselPhoto {
+  max-height: 100% !important;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselArrow {
+  opacity: 0.75;
+}
+#IDX-carouselGallery-11486 {
+  display: inline-block;
+  font-size: 11px;
+  position: relative;
+}
+#IDX-carouselGallery-11486 .IDX-outerCarouselWrapper {
+  overflow: hidden;
+}
+#IDX-carouselGallery-11486 .IDX-innerCarouselWrapper {
+  position: relative;
+  overflow: hidden;
+}
+#IDX-carouselGallery-11486 .IDX-carouselCell {
+  display: none;
+  border: 1px solid #666;
+  -webkit-box-shadow: 1px 1px 3px rgba(22, 22, 22, .4);
+  box-shadow: 1px 1px 3px rgba(22, 22, 22, .4);
+  padding: 3px;
+  vertical-align: top;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+}
+#IDX-carouselGallery-11486 .IDX-carouselLink {
+  height: 100%;
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+  display: inline-block;
+}
+#IDX-carouselGallery-11486 .IDX-carouselLink:before {
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+#IDX-carouselGallery-11486 .IDX-carouselPhoto {
+  max-width: 100%;
+  max-height: 110px;
+  display: inline-block;
+  vertical-align: middle;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselArrow {
+  display: block;
+  position: absolute;
+  background: #169679;
+  width: 40px;
+  text-decoration: none;
+  text-align: center;
+  height: 100%;
+  top: 0;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselPrevArrow {
+  left: 0;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselNextArrow {
+  right: 0;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselArrow, #IDX-carouselGallery-11486 a.IDX-carouselArrow:hover, #IDX-carouselGallery-11486 a.IDX-carouselArrow:visited {
+  color: #fff;
+  font-size: 20px;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselPrevArrow {
+  border-radius: 5px 0 0 5px;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselNextArrow {
+  border-radius: 0 5px 5px 0;
+}
+#IDX-carouselGallery-11486 a.IDX-carouselArrow span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -50%;
+}
+#IDX-carouselGallery-11486 .IDX-carouselCell div {
+  text-align: center;
+}
+#IDX-carouselGallery-11486 .IDX-carouselListingID, #IDX-carouselGallery-11486 .IDX-carouselBeds, #IDX-carouselGallery-11486 .IDX-carouselBaths, #IDX-carouselGallery-11486 .IDX-carouselFull, #IDX-carouselGallery-11486 .IDX-carouselPartial, #IDX-carouselGallery-11486 .IDX-carouselRemarks, #IDX-carouselGallery-11486 .IDX-carouselDisclaimerLink, #IDX-carouselGallery-11486 .IDX-carouselStatus, #IDX-carouselGallery-11486 .IDX-carouselStateAbrv {
+  display: none;
+}
+#IDX-carouselGallery-11486 .IDX-carouselContainer {
+  position: relative;
+}
+#IDX-carouselGallery-11486 .IDX-showcaseCourtesy {
+  display: block;
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";

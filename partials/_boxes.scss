@@ -24,7 +24,6 @@
   border-radius: 4px;
 
   &:before {
-    content: "";
     display: inline-block;
     position: absolute;
     background: $white;
@@ -33,6 +32,28 @@
     top: -15%;
     margin-left: -10%;
     border: 1px solid $border-color;
+    border-radius:100%;
+    font-family: FontAwesome;
+    line-height: 75px;
+    font-size: 35px;
+    color:$green;
+  }
+  
+  &:first-child:before {
+    content: "\f19c";
+  }
+
+  &:nth-child(2):before{
+    content: "\f1ad";
+  }
+
+  &:last-child:before {
+    content: "\f015";
+  }
+
+  &:hover:before {
+    background:$green;
+    color:$white;
   }
 
 }
