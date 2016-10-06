@@ -2,15 +2,35 @@
   display: flex;
   position: relative;
   padding: 5em 2em 2em 2em;
+  margin-bottom: 2em;
   justify-content: space-around;
   text-align: center;
 
-  h2 {
+  h3 {
     font-size: 18px;
   }
 
   p {
     font-size: 14px;
+  }
+
+  a {
+    color: $green;
+    background: $white;
+    border-radius: 0.25em;
+    border: 2px solid $green;
+    display: inline-block;
+    font-weight: normal;
+    margin: 1em auto 0;
+    padding: 1em 2em;
+    font-size: 1.5rem;
+    line-height: 1em;
+
+    &:hover {
+      color: $white;
+      background: $green;
+    }
+
   }
 
 }
@@ -19,6 +39,7 @@
   position: relative;
   margin: 2em;
   padding: 30px 15px 40px;
+  min-width: 300px;
   max-width: 400px;
   border: 1px solid $border-color;
   border-radius: 4px;
@@ -38,7 +59,7 @@
     font-size: 35px;
     color:$green;
   }
-  
+
   &:first-child:before {
     content: "\f19c";
   }

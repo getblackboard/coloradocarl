@@ -1,6 +1,5 @@
 	<?php get_header(); ?>
 
-
 	<?php
 		$context = array();
 		$context['welcome'] = Timber::get_post(2);

@@ -1,20 +1,25 @@
 {% if fn('is_front_page') %}
 
-  <div class="boxes"> 
- 
+  <h2>This is a test</h2>
+
+  <div class="boxes">
+
     <div class="box">
-        <h2>{{ welcome.content_left_header }}</h2>
-        <p>{{ welcome.content_block_left }}</p>
+      <h3>{{ welcome.content_left_header }}</h3>
+      <p>{{ welcome.content_block_left }}</p>
+      <a href="#">Learn More</a>
     </div>
 
     <div class="box">
-      <h2>{{ welcome.content_center_header }}</h2>
+      <h3>{{ welcome.content_center_header }}</h3>
       <p>{{ welcome.content_block_center }}</p>
+      <a href="#">Learn More</a>
     </div>
 
     <div class="box">
-     <h2>{{ welcome.content_right_header }}</h2>
+      <h3>{{ welcome.content_right_header }}</h3>
       <p>{{ welcome.content_block_right }}</p>
+      <a href="#">Learn More</a>
     </div>
 
   </div>
