@@ -1,0 +1,35 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size:$main-font-size;
+  background: $black;
+  padding: 20px;
+  color: $white;
+  font-weight:bold;
+
+  section {
+    position: relative;
+    margin-left: auto;
+    right: 15px;
+    height: 22px;
+
+    a {
+      position: relative;
+      color: $white;
+      top: 12px;
+      font-size: $main-font-size + 2;
+      padding: 0 5px;
+    }
+
+  }
+
+}
+
+.back-to-top {
+  background: #333;
+  color: $green;
+  border: none;
+  height: 40px;
+  width: 40px;
+}
+

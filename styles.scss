@@ -1,7 +1,6 @@
 @import './partials/partials';
 
 /* MISC > to be moved ... */
-$main-font-size: 16px;
 $home-hero: url(./img/hero-home.jpg);
 $border-radius: 15px;
 
@@ -144,19 +143,6 @@ ul.sub-menu {
     text-align: left;
 }
 
-/*-------
-  footer
----------*/
-
-.footer {
-  display: flex;
-  justify-content: center;
-  font-size:$main-font-size;
-  background: $black;
-  padding: 20px;
-  color: $white;
-  font-weight:bold;
-}
 
 /*-------
 Media queries
