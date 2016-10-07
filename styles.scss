@@ -3,7 +3,9 @@
 /* MISC > to be moved ... */
 $home-hero: url(./img/hero-home.jpg);
 $border-radius: 15px;
+$font-family: 'Open Sans', sans-serif;
 
+*{font-family: $font-family}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -24,78 +26,6 @@ h2 {
     margin: .5em auto 0 auto;
   }
 
-}
-
-/*-------
-  nav
----------*/
-nav {
-  background: $white;
-
-  a {
-    color: $black;
-    font-size: $main-font-size;
-    font-weight: bold;
-    float: left;
-    padding: 20px;
-
-    &:hover {
-      color: $green;
-    }
-
-  }
-
-  ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: flex-end;
-    margin: 0px;
-
-    li {
-      padding: 0px 15px;
-      display: flex;
-      flex-wrap: wrap;
-
-      a {
-        font-size: $main-font-size;
-        font-weight: bold;
-      }
-
-    }
-
-    ul {
-      background:none;
-
-      li {
-        display:none;
-      }
-
-    }
-
-  }
-
-}
-
-nav ul > li:hover > ul {
-  background: $white;
-  display: flex;
- }
-
-nav ul > li:hover > ul li {
-  display: flex;
-}
-
-ul.sub-menu {
-  position: absolute;
-  z-index: 99;
-  flex-wrap: wrap;
-  margin-top: 60px;
-  justify-content: flex-start;
-
-  &:hover {
-    display:flex;
-  }
 }
 
 /*-------

@@ -1,0 +1,221 @@
+/*-------
+  nav
+---------*/
+nav {
+  background: $white;
+    // nav anchor
+    a {
+      color: $black;
+      font-size: $main-font-size;
+      font-weight: bold;
+      float: left;
+      padding: 17px 15px 17px 15px;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transition: color .2s ease;
+      -moz-transition: color .2s ease;
+      -ms-transition: color .2s ease;
+      -o-transition: color .2s ease;
+      transition: color .2s ease;
+
+      &:hover {
+        color: $green;
+      }
+
+    }
+  // UL
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      justify-content: flex-end;
+      margin: 0px;
+        &.sub-menu {
+        position: absolute;
+        z-index: 99;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: flex-start;
+        -webkit-padding-start: 0px;
+
+          &:hover {
+            display:flex;
+          }
+        }
+// ul li
+    li {
+      padding: 0px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      &:last-child{ 
+        margin-right: 0 !important;
+        padding-right: 0 !important;
+      }
+      &:hover{
+        
+          ul {
+            height: 30px;
+            opacity: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            transform: scale(1);
+            li {
+              height: 30px;
+              opacity: 1;
+              -webkit-transform: scale(1);
+              -moz-transform: scale(1);
+              -o-transform: scale(1);
+              transform: scale(1);
+              transform: scale(1);
+
+            }
+          }
+        
+        a {color:$green;}
+      }
+        &.menu-item-has-children {
+            &:hover{
+              ul{
+                opacity: 1;
+                -webkit-transform: scale(1);
+                -moz-transform: scale(1);
+                -o-transform: scale(1);
+                transform: scale(1);
+                transform: scale(1);
+              }
+            }
+          ul {
+            opacity: 0;
+            -webkit-transform: scale(0.1);
+            -moz-transform: scale(0.1);
+            -o-transform: scale(0.1);
+            transform: scale(0.1);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+          }
+          a {  
+            padding-right: 11px; 
+            &:after{
+              position: relative;
+              top: -2px;
+              right: 0px;
+              width: 6px;
+              height: 6px;
+              margin-left: 5px;
+              margin-right: 3px;
+              border-bottom: 2px solid #000000;
+              border-right: 2px solid #000000;
+              content: "";
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              -o-transform: rotate(45deg);
+              transform: rotate(45deg);
+              -webkit-transition: border-color 0.2s ease;
+              -moz-transition: border-color 0.2s ease;
+              -ms-transition: border-color 0.2s ease;
+              -o-transition: border-color 0.2s ease;
+              transition: border-color 0.2s ease;
+              transition: all ease 0.3s;
+              display: inline-block;
+            }
+          }
+            &:hover {
+                      a {
+                        color: $green;
+
+                        &:after {
+                          border-color: #019779;
+                          -webkit-transform: rotate(222deg);
+                          -moz-transform: rotate(222deg);
+                          -ms-transform: rotate(222deg);
+                          -o-transform: rotate(222deg);
+                          transform: rotate(222deg);
+                          transition: all ease 0.3s;
+                        }
+                      }
+             
+                  ul {
+                    background: $white;
+                    display: flex;
+                    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+                                      // ul li ul li
+                      li {
+                        display: flex;
+                      }
+
+                    
+                    }
+                }
+              }
+          
+      
+            a {
+                color: $black;
+                font-size: $main-font-size - 4;
+                font-weight: bold;
+                padding: 17px 15px 17px 15px;
+                text-decoration: none;
+                text-transform: uppercase;
+                -webkit-transition: color .2s ease;
+                -moz-transition: color .2s ease;
+                -ms-transition: color .2s ease;
+                -o-transition: color .2s ease;
+                transition: color .2s ease;
+
+                &:hover {
+                  color: $green;
+                }
+              }
+             
+                ul {
+                  background:none;
+                  li {
+                    display:none;
+                    height: 0;
+                    padding: 0 0px;
+                    margin: 0 0 0px;
+                    opacity: 0;
+                    -webkit-transform: scale(0.1);
+                    -moz-transform: scale(0.1);
+                    -o-transform: scale(0.1);
+                    transform: scale(0.1);
+                    -webkit-transition: all 0.3s ease-in-out;
+                    -moz-transition: all 0.3s ease-in-out;
+                    -o-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                    a{
+                      width: 150px;
+                      padding: 10px 15px;
+                      background: none;
+                      text-decoration: none;
+                      font-size: 12px;
+                      line-height: 10px;
+                      font-weight: bold;
+                      color: $black;
+                      background: $white;
+                      text-decoration: none;
+                      text-transform: uppercase;
+                      -webkit-transition: color .2s ease;
+                      -moz-transition: color .2s ease;
+                      -ms-transition: color .2s ease;
+                      -o-transition: color .2s ease;
+                      transition: color .2s ease;
+                      &:after{visibility:hidden;}
+                      }
+                      &:hover{
+                        color:$green;
+                      }
+                  }
+                }
+              }
+
+        }
+  }
+
+

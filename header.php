@@ -11,7 +11,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
-
+		<!-- google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<?php wp_head(); ?>
 		<script>
 	    // conditionizr.com
@@ -26,7 +27,7 @@
 
 	<!-- nav -->
 
-	<nav class="nav" role="navigation">
+	<nav id="menu" class="nav" role="navigation">
 		<a  href="<?php echo home_url(); ?>">
 			Carl Borrmann
 		</a>
