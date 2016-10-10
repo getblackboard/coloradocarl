@@ -6,7 +6,7 @@
 	 	Timber::render('views/3-up.twig', $context); ?>
 
 	<?php Timber::render('views/slide.twig'); ?>
-	
+
 	<div class="wrapper">
 
 	<main role="main">
@@ -30,10 +30,11 @@
 
 		</article>
 		<!-- /article -->
+
 		<!-- Featured Showcase -->
 
+		<?php Timber::render('search.twig'); ?> <!-- the name of this partial needs changed -->
 
-		<?php Timber::render('search.twig'); ?>
 		<!--/Featured Showcase -->
 
 		<?php endwhile; ?>

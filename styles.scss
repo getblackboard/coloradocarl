@@ -3,9 +3,7 @@
 /* MISC > to be moved ... */
 $home-hero: url(./img/hero-home.jpg);
 $border-radius: 15px;
-$font-family: 'Open Sans', sans-serif;
 
-*{font-family: $font-family}
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -69,9 +67,6 @@ h2 {
   background: $white;
 }
 
-#IDX-quicksearch-8068 {
-    text-align: left;
-}
 
 
 /*-------
