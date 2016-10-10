@@ -5,13 +5,14 @@
 		$context['welcome'] = Timber::get_post(2);
 	 	Timber::render('views/3-up.twig', $context); ?>
 
-	<?php Timber::render('views/slide.twig'); ?>
+	
 
-	<div class="wrapper">
-
+	<div class="wrapper clear">
+<?php Timber::render('views/slide.twig'); ?>
 	<main role="main">
+
 		<!-- section -->
-		<section>
+		<section class="post-page">
 
 		<!-- <h1><?php the_title(); ?></h1> -->
 

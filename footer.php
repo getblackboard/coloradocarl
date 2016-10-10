@@ -1,5 +1,8 @@
 
   </div>
+  <footer>
+    <?php Timber::render('second_footer.twig'); ?>
+  </footer>
   <!-- footer -->
   <footer class="footer" role="contentinfo">
 
@@ -35,6 +38,20 @@
     ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
     ga('send', 'pageview');
   </script>
+<script>
+ $(function() {
+    var header = $(".nav");
+    $(window).scroll(function() {    
+        var scroll = $(window).scrollTop();
+    
+        if (scroll >= 1) {
+            header.addClass("fixed");
+        } else {
+            header.removeClass('fixed');
+        }
+    });
+});
 
+  </script>
   </body>
 </html>

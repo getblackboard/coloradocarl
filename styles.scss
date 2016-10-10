@@ -78,6 +78,15 @@ Media queries
     display: flex;
     justify-content: flex-start;
     width: 75%;
+
+      section {
+        width: 100%;
+        background: $header-color;
+        margin: 0px 20px;
+        border-radius: $border-radius;
+          
+         
+      }
   }
 
   .right_content {

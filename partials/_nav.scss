@@ -1,8 +1,18 @@
 /*-------
   nav
----------*/
+// ---------*/
+//  .fixed {
+//     position: fixed;
+//     width: 100%;
+//     z-index: 9999;
+//     }
 nav {
   background: $white;
+  border-bottom:1px solid #999;
+    
+
+  
+
     // nav anchor
     a {
       color: $black;

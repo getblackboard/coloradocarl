@@ -1,4 +1,7 @@
-<div class="new_showcase">
+
+{% if fn('is_front_page') %}
+<div>
 <h3>Featured Showcase</h3>
 <script charset="UTF-8" type="text/javascript" id="idxwidgetsrc-9796" src="http://ColoradoCarl.idxbroker.com/idx/customshowcasejs.php?widgetid=9796"></script>
 </div>
+{% endif %}
