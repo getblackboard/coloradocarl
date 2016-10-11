@@ -6,9 +6,9 @@
 	 	Timber::render('views/3-up.twig', $context); ?>
 
 	
-
-	<div class="wrapper clear">
 <?php Timber::render('views/slide.twig'); ?>
+	<div class="wrapper clear">
+
 	<main role="main">
 
 		<!-- section -->

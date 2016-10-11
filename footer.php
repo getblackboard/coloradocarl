@@ -1,7 +1,9 @@
 
   </div>
-  <footer>
-    <?php Timber::render('second_footer.twig'); ?>
+  <footer class="footer2">
+    
+    <?php if(!function_exists('dynamic_sidebar') || !dynamic_sidebar('widget-area-1')) ?>
+
   </footer>
   <!-- footer -->
   <footer class="footer" role="contentinfo">

@@ -75,7 +75,7 @@ Media queries
 @media only screen and (min-width: 660px) {
 
   main {
-    display: flex;
+    display: flex!important;
     justify-content: flex-start;
     width: 75%;
 

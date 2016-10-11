@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   font-size:$main-font-size;
-  background: #262626;
+  background: $footer-background;
   padding: 20px;
   color: $white;
   font-weight:bold;
@@ -31,5 +31,18 @@
   border: none;
   height: 40px;
   width: 40px;
+}
+.footer2 {
+    width: 100%;
+    background: $footer2-background;
+    padding: 20px;
+    margin-top: 20px;
+    color:$white;
+    font-size:$main-font-size;
+    font-weight: bold;
+      a {
+        color:$white;
+      }
+
 }
 
