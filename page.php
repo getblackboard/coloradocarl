@@ -5,8 +5,8 @@
 		$context['welcome'] = Timber::get_post(2);
 	 	Timber::render('views/3-up.twig', $context); ?>
 
-	
-<?php Timber::render('views/slide.twig'); ?>
+
+<?php Timber::render('views/featured-listings.twig'); ?>
 	<div class="wrapper clear">
 
 	<main role="main">
