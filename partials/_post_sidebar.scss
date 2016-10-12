@@ -24,6 +24,7 @@
                 &:hover{color:#019779;}
               }
             }
+            h2{width:100%;}
             h6 {
               font-size:$main-font-size;
               margin: 5px 0px;
@@ -48,3 +49,6 @@
   div#mortgage-calculator-2 {
       width: 50%;
   }
+  div#lidd_mc_widget-2 {
+    width: 50%;
+}
