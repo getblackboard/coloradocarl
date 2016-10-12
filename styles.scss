@@ -80,7 +80,7 @@ Media queries
   main {
     display: flex!important;
     justify-content: flex-start;
-    width: 75%;
+    width: 100%;
 
     section {
       width: 100%;
@@ -92,10 +92,19 @@ Media queries
   .right_content {
     display: flex;
     color: #000;
-    justify-content: flex-end;
-    width: 21%;
-    margin: 15px;
-    padding: 10px;
+    width: 100%;
   }
-
+  
+  aside.sidebar {
+    width: 100%; 
+  }
+.widget_siteorigin-panels-postloop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width:100%;
+}
+div#mortgage-calculator-2 {
+    width: 50%;
+}
 }

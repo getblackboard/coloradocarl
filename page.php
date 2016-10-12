@@ -6,7 +6,7 @@
 	 	Timber::render('views/3-up.twig', $context); ?>
 
 
-<?php Timber::render('views/featured-listings.twig'); ?>
+	<?php Timber::render('views/featured-listings.twig'); ?>
 	<div class="wrapper clear">
 
 	<main role="main">

@@ -1,0 +1,50 @@
+.sidebar-widget {
+    display: flex;
+    justify-content: space-around;
+      article {
+          width: 100%;
+          flex-wrap: wrap;
+          display: flex;
+          border-bottom: 1px solid #999;
+          margin: 0px 20px;
+          height: 130px;
+      }
+      .post_thumb {
+          width: 15%;
+      }
+      .post_body {
+          width: 85%;
+          padding: 10px;
+          h5 {
+              font-size: 20px;
+              margin: 10px 0px;
+              a {
+                color:#2c3e55;
+                transition: all 0.3s ease-in-out 0s;
+                &:hover{color:#019779;}
+              }
+            }
+            h6 {
+              font-size:$main-font-size;
+              margin: 5px 0px;
+              a {
+                color:#2c3e55;
+                transition: all 0.3s ease-in-out 0s;
+                  &:hover{color:#019779;}
+              }
+            }
+          
+      }
+  }
+  aside.sidebar {
+    width: 100%; 
+  }
+  .widget_siteorigin-panels-postloop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width:100%;
+  }
+  div#mortgage-calculator-2 {
+      width: 50%;
+  }
