@@ -32,12 +32,6 @@
 		</article>
 		<!-- /article -->
 
-		<!-- Featured Showcase -->
-
-		<?php Timber::render('search.twig'); ?> <!-- the name of this partial needs changed -->
-
-		<!--/Featured Showcase -->
-
 		<?php endwhile; ?>
 
 		<?php else: ?>
