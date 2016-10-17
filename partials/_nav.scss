@@ -1,11 +1,38 @@
-/*-------
-  nav
-// ---------*/
-//  .fixed {
-//     position: fixed;
-//     width: 100%;
-//     z-index: 9999;
-//     }
+
+
+
+//  @mixins
+// ---------
+
+@mixin transition($ease: 0.3s) {
+   -webkit-transition: all $ease ease-in-out;
+    -moz-transition: all $ease ease-in-out;
+    -o-transition: all $ease ease-in-out;
+    transition: all $ease ease-in-out;
+}
+@mixin color-transform($ease: 0.2s) {
+   -webkit-transition: color $ease ease;
+    -moz-transition: color $ease ease;
+    -ms-transition: color $ease ease;
+    -o-transition: color $ease ease;
+    transition: color $ease ease;
+}
+@mixin transform($scale) {
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);               
+}
+@mixin rotate($deg){
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+// Nav
+// --------
 
 nav {
   background: $white;
@@ -19,11 +46,7 @@ nav {
       padding: 17px 15px 17px 15px;
       text-decoration: none;
       text-transform: uppercase;
-      -webkit-transition: color .2s ease;
-      -moz-transition: color .2s ease;
-      -ms-transition: color .2s ease;
-      -o-transition: color .2s ease;
-      transition: color .2s ease;
+      @include color-transform;
 
       &:hover {
         color: $green;
@@ -67,20 +90,14 @@ nav {
               ul {
                 height: 30px;
                 opacity: 1;
-                -webkit-transform: scale(1);
-                -moz-transform: scale(1);
-                -o-transform: scale(1);
-                transform: scale(1);
-                transform: scale(1);
+                @include transform(1);
+                
 
                 li {
                   height: 30px;
                   opacity: 1;
-                  -webkit-transform: scale(1);
-                  -moz-transform: scale(1);
-                  -o-transform: scale(1);
-                  transform: scale(1);
-                  transform: scale(1);
+                  @include transform(1);
+                  
                 }
 
               }
@@ -95,25 +112,15 @@ nav {
 
               ul{
                 opacity: 1;
-                -webkit-transform: scale(1);
-                -moz-transform: scale(1);
-                -o-transform: scale(1);
-                transform: scale(1);
-                transform: scale(1);
+                 @include transform(1);
               }
 
             }
 
             ul {
               opacity: 0;
-              -webkit-transform: scale(0.1);
-              -moz-transform: scale(0.1);
-              -o-transform: scale(0.1);
-              transform: scale(0.1);
-              -webkit-transition: all 0.3s ease-in-out;
-              -moz-transition: all 0.3s ease-in-out;
-              -o-transition: all 0.3s ease-in-out;
-              transition: all 0.3s ease-in-out;
+               @include transform(0.1);
+               @include transition;
             }
 
             a {
@@ -130,16 +137,8 @@ nav {
                     border-bottom: 2px solid #000000;
                     border-right: 2px solid #000000;
                     content: "";
-                    -webkit-transform: rotate(45deg);
-                    -moz-transform: rotate(45deg);
-                    -ms-transform: rotate(45deg);
-                    -o-transform: rotate(45deg);
-                    transform: rotate(45deg);
-                    -webkit-transition: border-color 0.2s ease;
-                    -moz-transition: border-color 0.2s ease;
-                    -ms-transition: border-color 0.2s ease;
-                    -o-transition: border-color 0.2s ease;
-                    transition: border-color 0.2s ease;
+                    @include rotate (45deg);
+                    @include transition;
                     transition: all ease 0.3s;
                     display: inline-block;
                   }
@@ -153,11 +152,7 @@ nav {
 
                   &:after {
                     border-color: #019779;
-                    -webkit-transform: rotate(222deg);
-                    -moz-transform: rotate(222deg);
-                    -ms-transform: rotate(222deg);
-                    -o-transform: rotate(222deg);
-                    transform: rotate(222deg);
+                     @include rotate (222deg);
                     transition: all ease 0.3s;
                   }
 
@@ -188,11 +183,7 @@ nav {
                 padding: 17px 15px 17px 15px;
                 text-decoration: none;
                 text-transform: uppercase;
-                -webkit-transition: color .2s ease;
-                -moz-transition: color .2s ease;
-                -ms-transition: color .2s ease;
-                -o-transition: color .2s ease;
-                transition: color .2s ease;
+                @include color-transform;
 
                 &:hover {
                   color: $green;
@@ -208,14 +199,8 @@ nav {
                   padding: 0 0px;
                   margin: 0 0 0px;
                   opacity: 0;
-                  -webkit-transform: scale(0.1);
-                  -moz-transform: scale(0.1);
-                  -o-transform: scale(0.1);
-                  transform: scale(0.1);
-                  -webkit-transition: all 0.3s ease-in-out;
-                  -moz-transition: all 0.3s ease-in-out;
-                  -o-transition: all 0.3s ease-in-out;
-                  transition: all 0.3s ease-in-out;
+                  @include transform(0.1);
+                  @include transition;
 
                     a {
                       width: 150px;
@@ -229,11 +214,7 @@ nav {
                       background: $white;
                       text-decoration: none;
                       text-transform: uppercase;
-                      -webkit-transition: color .2s ease;
-                      -moz-transition: color .2s ease;
-                      -ms-transition: color .2s ease;
-                      -o-transition: color .2s ease;
-                      transition: color .2s ease;
+                      @include color-transform;
                       &:after{visibility:hidden;}
 
                     }
