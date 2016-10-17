@@ -34,16 +34,63 @@
 }
 
 .footer2 {
+    display: flex;
     background: $footer2-background;
     color: $white;
-    padding: 20px;
-    margin-top: 20px;
-    width: 100%;
-    font-size: $main-font-size;
-    font-weight: bold;
+    justify-content: space-around;
+    padding: 3% 2% 4%;
+
+    > div {
+      width: 33.333333%;
+    }
+
+    .textwidget {
+      font-size: 14px;
+    }
+
+    h3 {
+      font-size: 18px;
+    }
 
     a {
       color: $white;
     }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+}
+
+.tagcloud {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    font-size: 12px !important;
+    font-weight: bold;
+    border: 1px solid;
+    padding: 9px 14px;
+    margin: 0 2% 3% 0;
+
+    &:hover { background: $green; }
+
+  }
+
+}
+
+@media only screen and (max-width: 660px) {
+
+  .footer2 {
+    flex-direction: column;
+
+    > div {
+      width: 100%;
+    }
+
+  }
 
 }
