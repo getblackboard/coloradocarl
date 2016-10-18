@@ -1,6 +1,9 @@
 .sidebar-widget {
     display: flex;
     justify-content: space-around;
+    @media(max-width:660px){
+          flex-wrap: wrap;
+    }
       article {
           width: 100%;
           flex-wrap: wrap;

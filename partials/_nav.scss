@@ -36,8 +36,9 @@
 
 nav {
   background: $white;
-
+        
     a {
+      
       color: $black;
       font-size: $main-font-size;
       font-weight: bold;
@@ -46,9 +47,13 @@ nav {
       text-decoration: none;
       text-transform: uppercase;
       @include color-transform;
-
+      
       &:hover {
         color: $green;
+      }
+      @media(max-width:660px){
+        width: 100%;
+        text-align: center; 
       }
 
     }
@@ -59,15 +64,21 @@ nav {
       list-style: none;
       justify-content: flex-end;
       margin: 0px;
-
-        &.sub-menu {
-        position: absolute;
-        z-index: 99;
-        flex-wrap: wrap;
-        margin-top: 50px;
-        justify-content: flex-start;
-        -webkit-padding-start: 0px;
-
+        @media(max-width:660px){
+              flex-direction: column;
+              justify-content: center;
+              width: 100%;
+              padding: 0px;
+        }
+          @media(min-width:661px){
+            &.sub-menu {
+            position: absolute;
+            z-index: 99;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            justify-content: flex-start;
+            -webkit-padding-start: 0px;
+          }
           &:hover {
             display:flex;
           }
@@ -78,35 +89,37 @@ nav {
           padding: 0px 15px;
           display: flex;
           flex-wrap: wrap;
-
+            @media(max-width:660px){
+              padding:0px;
+            }
           &:last-child {
             margin-right: 0 !important;
             padding-right: 0 !important;
           }
 
           &:hover {
-
-              ul {
-                height: 30px;
-                opacity: 1;
-                @include transform(1);
-                
-
-                li {
+            @media(min-width:661px){
+                ul {
                   height: 30px;
                   opacity: 1;
                   @include transform(1);
                   
+
+                  li {
+                    height: 30px;
+                    opacity: 1;
+                    @include transform(1);
+                    
+                  }
+
                 }
 
-              }
-
-            a {color:$green;}
-
+              a {color:$green;}
+            }
           }
 
         &.menu-item-has-children {
-
+            
             &:hover{
 
               ul{
@@ -117,9 +130,11 @@ nav {
             }
 
             ul {
-              opacity: 0;
-               @include transform(0.1);
-               @include transition;
+              @media(min-width:661px){
+                opacity: 0;
+                 @include transform(0.1);
+                 @include transition;
+              }
             }
 
             a {
@@ -145,29 +160,30 @@ nav {
             }
 
             &:hover {
+              @media(min-width:661px){
+                  a {
+                    color: $green;
 
-                a {
-                  color: $green;
-
-                  &:after {
-                    border-color: #019779;
-                     @include rotate (222deg);
-                    transition: all ease 0.3s;
-                  }
-
-                }
-
-                ul {
-                  background: $white;
-                  display: flex;
-                  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-                  box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
-                                    // ul li ul li
-                    li {
-                      display: flex;
+                    &:after {
+                      border-color: #019779;
+                       @include rotate (222deg);
+                      transition: all ease 0.3s;
                     }
 
+                  }
 
+                  ul {
+                    background: $white;
+                    display: flex;
+                    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+                    box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+                                      // ul li ul li
+                      li {
+                        display: flex;
+                      }
+
+
+                    }
                   }
 
                 }
@@ -187,20 +203,22 @@ nav {
                 &:hover {
                   color: $green;
                 }
+
               }
 
               ul {
                 background:none;
 
-                li {
-                  display:none;
-                  height: 0;
-                  padding: 0 0px;
-                  margin: 0 0 0px;
-                  opacity: 0;
-                  @include transform(0.1);
-                  @include transition;
-
+                  li {
+                      @media(min-width:661px){
+                      display:none;
+                      height: 0;
+                      padding: 0 0px;
+                      margin: 0 0 0px;
+                      opacity: 0;
+                      @include transform(0.1);
+                      @include transition;
+                  }
                     a {
                       width: 150px;
                       padding: 10px 15px;
@@ -216,6 +234,11 @@ nav {
                       @include color-transform;
                       &:after{visibility:hidden;}
 
+                       @media(max-width:660px){
+                           color: $green;
+                           width:100%;
+                       }
+
                     }
 
                     &:hover{
@@ -229,4 +252,5 @@ nav {
               }
 
         }
+        
   }

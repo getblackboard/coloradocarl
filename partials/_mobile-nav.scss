@@ -1,0 +1,25 @@
+  #menu {
+    display: none;
+      @media (min-width: 661px){
+        display: block;            
+      }
+  }
+  #mobile-menu {
+    display:block;
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    font-size: 45px;
+    margin: 20px;
+    .fa {
+      cursor:pointer;
+    }
+        @media (min-width: 661px){
+          display:none;
+        }
+  }
+   #open{
+    display: block;
+  }
+
+  #close{display:none;}

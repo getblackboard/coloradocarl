@@ -14,6 +14,6 @@
 		<!-- /section -->
 	</main>
 
-<div class="right_content"><?php get_sidebar(); ?></div>
+
 </div>
 <?php get_footer(); ?>

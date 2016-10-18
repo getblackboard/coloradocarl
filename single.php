@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php the_post_thumbnail(); // Fullsize image for the single post ?>
 	<div class="wrapper">
 	<main role="main">
 	<!-- section -->
@@ -11,7 +12,7 @@
 			<!-- post thumbnail -->
 			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
+					
 				</a>
 			<?php endif; ?>
 			<!-- /post thumbnail -->
@@ -61,6 +62,5 @@
 	<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
