@@ -5,23 +5,23 @@
   <div class="boxes">
 
     <div class="box">
-      <h3>{{ welcome.content_left_header }}</h3>
-      <p>{{ welcome.content_block_left }}</p>
+      <h3>{{ welcome.get_field('content_left_header') }}</h3>
+      <p>{{ welcome.get_field('content_block_left') }}</p>
 
       
-      <a href="{{ welcome.left_button_link }}" >Learn More</a>
+      <a href="{{ welcome.get_field('left_button_link') }}" >Learn More</a>
     </div>
 
     <div class="box">
-      <h3>{{ welcome.content_center_header }}</h3>
-      <p>{{ welcome.content_block_center }}</p>
-      <a href="#">Learn More</a>
+      <h3>{{ welcome.get_field('content_center_header') }}</h3>
+      <p>{{ welcome.get_field('content_block_center') }}</p>
+      <a href="{{ welcome.get_field('center_button_link') }}">Learn More</a>
     </div>
 
     <div class="box">
-      <h3>{{ welcome.content_right_header }}</h3>
-      <p>{{ welcome.content_block_right }}</p>
-      <a href="#">Learn More</a>
+      <h3>{{ welcome.get_field('content_right_header') }}</h3>
+      <p>{{ welcome.get_field('content_block_right') }}</p>
+      <a href="{{ welcome.get_field('right_button_link') }}">Learn More</a>
     </div>
 
   </div>
