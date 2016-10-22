@@ -21,6 +21,7 @@ nav,
 section,
 summary {
     display: block;
+    width:100%;
 }
 
 /**
